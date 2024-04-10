@@ -1,0 +1,47 @@
+/* MAIN BODY TEXT */
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  color: black;
+}
+
+.body_text {
+  margin-bottom: 2%;
+}
+
+.header,
+.byline {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-weight: 600;
+}
+
+.byline {
+  color: gray;
+}
+
+.title {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+/* highlight text */
+.pink_highlight {
+  background-color: #d9a4c5;
+  color: white;
+  border-radius: 8px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 5px 0 5px;
+}
+
+.green_highlight {
+  background-color: #1d5902;
+  color: white;
+  border-radius: 8px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 5px 0 5px;
+}
