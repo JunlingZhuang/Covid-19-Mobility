@@ -1,3 +1,68 @@
+/* TOOLTIP */
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  max-width: 200px;
+  height: auto;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  background: white;
+  opacity: 0.7;
+}
+
+/* AXIS */
+.tick line {
+  visibility: hidden;
+}
+
+.grid line {
+  stroke: #ababab;
+  fill: #ababab;
+  opacity: 0.2;
+  visibility: visible !important;
+}
+
+.y_label_text text,
+.x_label_text text {
+  font-weight: bold;
+  font-size: 9.5pt;
+}
+
+text {
+  font-size: 9pt;
+  color: #ababab;
+}
+
+.domain {
+  stroke: #ababab;
+  opacity: 0.7;
+}
+
+#lag_x_axis > .domain,
+#lag_y_axis > .domain,
+.grid > .domain {
+  fill: none;
+  stroke: none;
+}
+
+#lag_x_axis line,
+#lag_y_axis line,
+.y_axis .domain {
+  visibility: hidden;
+}
+
+#lag_x_axis text,
+#lag_y_axis text,
+#us_x_axis text {
+  color: black;
+}
+
+#lag_y_axis text {
+  font-size: 8pt;
+}
+
 /* MAIN BODY TEXT */
 body {
   font-family: sans-serif;
@@ -96,4 +161,98 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
+}
+
+/* VIZ */
+.lag,
+.us-graph,
+.scatter {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0% 0% 3% 0%;
+  z-index: 1;
+}
+
+.checkboxes {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0% 0% 3% 0%;
+}
+
+/* VIZ TITLES */
+.graph_title {
+  font-weight: bold;
+}
+
+.graph_title_container {
+  margin-bottom: 20px;
+}
+
+.graph_title {
+  margin-bottom: 10px;
+}
+
+.graph_byline {
+  color: #dbdbdb;
+}
+
+/* CHECKBOXES */
+.checkbox:hover {
+  accent-color: grey;
+}
+
+#cb2008:checked {
+  accent-color: #b55997;
+}
+
+#cb2101:checked {
+  accent-color: #d9a4c5;
+}
+
+#cb2104:checked {
+  accent-color: #f8d7eb;
+}
+
+/* VIZ TITLES */
+.graph_title {
+  font-weight: bold;
+}
+
+.graph_title_container {
+  margin-bottom: 20px;
+  margin-top: 3%;
+}
+
+.graph_title {
+  margin-bottom: 5px;
+}
+
+.graph_byline {
+  color: gray;
+}
+
+/* LINKS */
+a:link {
+  color: #1d5902;
+  text-decoration: underline;
+  -webkit-any-link: none;
+}
+
+a:hover {
+  color: #b55997;
+  text-decoration: underline;
+  -webkit-any-link: none;
+}
+
+a:visited {
+  color: #b55997;
+  text-decoration: underline;
+  -webkit-any-link: none;
+}
+
+/* legend */
+.state_leg {
+  background-color: white;
 }

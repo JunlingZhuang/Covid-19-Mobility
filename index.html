@@ -31,7 +31,7 @@
         As the scale and geographic reach of the pandemic swelled in the early months of 2020, mobility and travel contracted in tandem. Mobility to workplaces, retail and recreational places, and transit all observed drastic reductions as businesses closed and people shifted to online school and work. 
     </div>
 
-    <!-- mobility vs cases graph -->
+   <!-- mobility vs cases graph -->
     <div class="graph_title_container">
         <div class="graph_title" id="us_title">Effect of Rising Covid Cases on Mobility</div>
         <div class="graph_byline" id="us_byline">Weekly new <span class="green_highlight">covid cases</span> and change in <span class="pink_highlight">mobility</span> from baseline for the first wave of Covid</div>
@@ -46,6 +46,50 @@
         The chart below illustrates the time lag between voluntary mobility reductions—as measured by the week when mobility observed the greatest decrease from the baseline—and government action. 
     </div>
 
+
+  <!-- state by state timeline of stay at home orders -->
+    <div class="graph_title_container">
+        <div class="graph_title" id="lag_title">Lag in community and state responses</div>
+        <div class="graph_byline" id="lag_byline">Time lag between the week a state observed the <span class="pink_highlight">largest drop in mobility</span> and the week <span class="green_highlight">the stay-at-home order</span> commenced.</div>
+    </div>
+    <figure class="lag"></figure>
+
+    <div class="body_text">
+        All states observed their largest decline in mobility within a week of each other, whereas the start dates of state stay-at-home orders span nearly three weeks. Of the states that imposed a stay-at-home order, all but two observed a time lag between voluntary mobility reductions and the imposition of the stay-at-home order. New York (NY) and California (CA) both observed their largest reduction in mobility during the same week that the stay-at-home order began. The decline in mobility prior to government action may be attributed to a trend of increasing cases, <a target=”_blank” href=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3599572>a sense of social responsibility,</a> or advanced warning of forthcoming policy changes. 
+    </div>
+
+    <div class="body_text">
+        Nevertheless the efficacy of government lockdowns in reducing mobility and maintaining low social contact should not be fully dismissed. Many states lifted their stay-at-home orders by the end of June 2020 and failed to reinstate them during subsequent COVID-19 waves. The absence of state or national policy delegated travel decisions to individuals and communities based on personal risk assessments. In the 12 months following the initial COVID onset, the US experienced three subsequent waves in August 2020, January 2021, and April 2021. While mobility remained firmly below the baseline during these latter three waves, it never reached the levels of the initial lockdown in March and April 2020—despite higher reported COVID cases. This is likely attributable to the lack of governmental measures and <a target=”_blank” href=https://growthlab.cid.harvard.edu/publications/lockdown-fatigue-diminishing-effects-quarantines-spread-covid-19>lockdown fatigue</a> amongst individuals.
+    </div>  
+
+
+    <!-- lockdown vs not lockdown scatterplot -->
+    <div class="graph_title_container">
+        <div class="graph_title" id="scatter_title">Mobility and Covid Cases During COVID Waves</div>
+        <div class="graph_byline" id="scatter_byline">
+            Mobility changes and cases during a <span class="green_highlight">stay-at-home order</span> (April 2020) compared to <span class="pink_highlight">no stay-at-home-order</span> (Aug 2020, Jan 2021, April 2021).  
+        </div>
+    </div>
+    
+    <!-- buttons -->
+    <div class="checkboxes">
+
+        <input type="checkbox" class="checkbox" id="cb2008" value="August2020" checked>
+        <label>August 2020</label>
+
+        <input type="checkbox" class="checkbox" id="cb2101" value="January2021" checked>
+        <label>January 2021</label>
+
+        <input type="checkbox" class="checkbox" id="cb2104" value="April2021" checked>
+        <label>April 2021</label>
+    </div>
+
+    <figure class="scatter"></figure>
+
+    <div class="body_text">
+        The combination of personal and government responses to the COVID-19 drastically reduced mobility. During the first COVID wave, voluntary isolation outpaced state guidelines—especially in those states resistant to stay-at-home orders. However, 'lockdown fatigue' resulted in less extreme personal mobility reductions through subsequent COVID waves. Stay-at-home measures are effective. Their continued success depends on a considered and prudent approach to their implementation in order to avoid excessive lockdown fatigue and a negative impact on individuals’ voluntary actions.
+    </div>
+    
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/MotionPathPlugin.min.js"></script>
