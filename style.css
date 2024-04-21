@@ -45,3 +45,55 @@ body {
   box-decoration-break: clone;
   padding: 0 5px 0 5px;
 }
+
+/* SCREEN SIZE */
+/* big screens */
+@media screen and (min-width: 900px) {
+  .body_text,
+  .graph_title,
+  .graph_byline,
+  .title {
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+
+  .body_text,
+  .graph_byline {
+    font-size: 14pt;
+  }
+
+  .graph_title,
+  .byline {
+    font-size: 16pt;
+  }
+
+  .header {
+    font-size: 36pt;
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 900px) {
+  .body_text,
+  .graph_title,
+  .graph_byline {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .body_text {
+    font-size: 11pt;
+  }
+
+  .graph_title,
+  .graph_byline,
+  .byline {
+    font-size: 13pt;
+  }
+
+  .header {
+    font-size: 24pt;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
