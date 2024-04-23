@@ -1,5 +1,3 @@
-import * as d3 from "d3"; // import d3 library
-
 // Parse the data
 function parseData(data) {
   const parseTime = d3.timeParse("%Y-%m-%d");
@@ -26,11 +24,18 @@ export function loadData() {
     ),
   ])
     .then((dataset) => {
-      const [state_data, us_ntl_data, lockdown_data] = dataset;
+      const [state_data, us_data, lockdown_data] = dataset;
+      state_data.sort(
+        (x, y) =>
+          d3.ascending(
+            x.mobility_lockdown_lag_wk,
+            y.mobility_lockdown_lag_wk
+          ) || d3.ascending(x.sah_week_start_date, y.sah_week_start_date)
+      );
 
       return {
         state_data: parseData(state_data),
-        us_ntl_data: parseData(us_ntl_data),
+        us_data: us_data,
         lockdown_data: parseData(lockdown_data),
       };
     })

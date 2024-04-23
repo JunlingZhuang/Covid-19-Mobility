@@ -1,5 +1,10 @@
+// Define margin and arrow_padding outside the config object
+const margin = { top: 25, bottom: 0, left: 40, right: 40 };
+const arrow_padding = 8;
+
+// Now define the config object using the previously defined variables
 const config = {
-  margin: { top: 25, bottom: 0, left: 40, right: 40 },
+  margin: margin,
   colors: {
     light_green: "#E6F6D7",
     med_green: "#C1DAB0",
@@ -16,7 +21,7 @@ const config = {
     [0, 20],
     [20, 10],
   ],
-  arrow_padding: 8,
+  arrow_padding: arrow_padding,
   arrow_margin: {
     top: 20,
     bottom: 60,

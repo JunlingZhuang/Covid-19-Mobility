@@ -311,6 +311,9 @@ Promise.all([
       // 1000 = a little padding at the top
       .domain([0, max_covid_cases + 1000]);
 
+
+   ///////////////////////////////////////////////////////////////////////////
+   
     // x axis grid lines
     cases_y_grid = svg_us.append("g").attr("class", "grid");
 
