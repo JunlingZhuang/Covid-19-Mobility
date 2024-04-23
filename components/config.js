@@ -47,6 +47,12 @@ const config = {
   week_filter: 20, // how many weeks to include on area chart
   label_type_size: 9.5, // type size of axis labels using for spacing
   lag_label_type_size: 8, // type size of lag labels
+
+  // state chart
+
+leg_circ_size : 8,
+leg_padding :25,
+
 };
 
 export default config;
