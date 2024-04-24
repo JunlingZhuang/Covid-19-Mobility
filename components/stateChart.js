@@ -73,7 +73,7 @@ function setup(svg_state, state_data) {
     .attr("id", function (d) {
       return d.Code;
     })
-    .attr("stroke", config.grey)
+    .attr("stroke", config.colors.grey)
     .attr("stroke-width", config.line_width)
     .attr("opacity", 1)
     .on("mouseover", onMouseover)
@@ -91,7 +91,7 @@ function setup(svg_state, state_data) {
     .attr("id", function (d) {
       return d.Code;
     })
-    .style("fill", config.med_pink)
+    .style("fill", config.colors.med_pink)
     .attr("r", function (d) {
       return d.log_weekly_new_cases;
     })
@@ -110,7 +110,7 @@ function setup(svg_state, state_data) {
     .attr("id", function (d) {
       return d.Code;
     })
-    .style("fill", config.dark_green)
+    .style("fill", config.colors.dark_green)
     .attr("r", function (d) {
       return d.sah_log_weekly_new_cases;
     })
@@ -301,6 +301,107 @@ function setup(svg_state, state_data) {
     .attr("cy", function (d) {
       return y_scale(d.Code) + config.lag_label_type_size;
     });
+
+  lines_btwn
+    .attr("x1", function (d) {
+      return x_scale(d.week_start_date);
+    })
+    .attr("y1", function (d, i) {
+      return y_scale(d.Code);
+    })
+    .attr("x2", function (d) {
+      return x_scale(d.sah_week_start_date);
+    })
+    .attr("y2", function (d, i) {
+      return y_scale(d.Code);
+    })
+    .attr(
+      "transform",
+      "translate(" +
+        config.margin.left +
+        "," +
+        (config.margin.top + config.lag_label_type_size) +
+        ")"
+    );
+
+  start_circs
+    .attr("cx", function (d) {
+      return x_scale(d.week_start_date);
+    })
+    .attr("cy", function (d, i) {
+      return y_scale(d.Code);
+    })
+    .attr(
+      "transform",
+      "translate(" +
+        config.margin.left +
+        "," +
+        (config.margin.top + config.lag_label_type_size) +
+        ")"
+    );
+
+  sah_circs
+    .attr("cx", function (d) {
+      return x_scale(d.sah_week_start_date);
+    })
+    .attr("cy", function (d, i) {
+      return y_scale(d.Code);
+    })
+    .attr(
+      "transform",
+      "translate(" +
+        config.margin.left +
+        "," +
+        (config.margin.top + config.lag_label_type_size) +
+        ")"
+    );
+
+  // legend
+  var color_start_height = config.margin.top * 2.5;
+  var size_start_height = color_start_height + 2.5 * config.leg_padding;
+  var party_start_height = size_start_height + 2.5 * config.leg_padding;
+
+  // legend
+  var color_start_height = config.margin.top * 2.5;
+  var size_start_height = color_start_height + 2.5 * config.leg_padding;
+  var party_start_height = size_start_height + 2.5 * config.leg_padding;
+
+  // color of circles
+  state_leg
+    .attr("cx", leg_width) // appear on right side of graph
+    .attr("cy", function (d, i) {
+      // vertical alignment
+      return color_start_height + i * config.leg_padding;
+    });
+
+  state_leg_color_lab.attr("x", leg_width + 15).attr("y", function (d, i) {
+    // vertical alignment
+    return (
+      color_start_height + i * config.leg_padding + config.leg_circ_size / 2
+    );
+  });
+
+  // sizes of circles
+  state_leg_sizes
+    .attr("cx", function (d, i) {
+      return leg_width + i * config.leg_padding;
+    })
+    .attr("cy", size_start_height);
+
+  state_leg_size_lab
+    .attr("x", leg_width - config.leg_circ_size / 2)
+    .attr("y", size_start_height + config.leg_padding + 5);
+
+  // party circles
+  state_leg_party.attr("cx", leg_width).attr("cy", function (d, i) {
+    return party_start_height + i * config.leg_padding;
+  });
+
+  state_leg_party_lab.attr("x", leg_width + 15).attr("y", function (d, i) {
+    return (
+      party_start_height + i * config.leg_padding + config.leg_circ_size / 2
+    );
+  });
 }
 
 // FUNCTIONS
@@ -340,4 +441,5 @@ function onMouseout() {
 
 export function drawStateChart(svg_state, state_data) {
   setup(svg_state, state_data);
+  ScrollTrigger.refresh();
 }

@@ -1,5 +1,4 @@
 import config from "./config.js";
-import { loadData } from "./dataLoader.js";
 
 function setup(svg_us, us_data) {
   console.log(us_data);
