@@ -400,4 +400,3 @@ export function drawlineChart(svg_us, us_data) {
   //   resize(svg_us, us_data);
 }
 
-export default drawlineChart;

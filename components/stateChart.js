@@ -25,7 +25,6 @@ const state_leg_data = [
 ];
 
 function setup(svg_state, state_data) {
-  console.log("state data", state_data);
   /* US State GRAPH */
   /* STATE TIMELINE */
   // sort by lag time and the day the stay-at-home (sah) order began
@@ -223,7 +222,6 @@ function setup(svg_state, state_data) {
   x_scale.range([0, width - 2 * config.margin.left]);
   y_scale.range([0, state_height - config.margin.top]);
 
-  console.log(config.margin.top, config.margin.top);
   // x axis
   svg_state
     .append("g")
@@ -242,7 +240,6 @@ function setup(svg_state, state_data) {
     return d3.axisBottom(x_scale).ticks(ticks_unit);
   }
 
-  console.log(config.margin.top, state_height);
   x_axis_grid
     .attr(
       "transform",
@@ -255,7 +252,6 @@ function setup(svg_state, state_data) {
         .tickSizeOuter(0)
     );
 
-  console.log(config.label_type_size, config.margin.top);
   // y axis
   svg_state
     .append("g")
