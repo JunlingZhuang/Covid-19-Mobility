@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19 Mobility</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+      rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -53,7 +56,10 @@
         <div class="graph_byline" id="lag_byline">Time lag between the week a state observed the <span class="pink_highlight">largest drop in mobility</span> and the week <span class="green_highlight">the stay-at-home order</span> commenced.</div>
     </div>
     <figure class="lag"></figure>
-
+    <div class="tips">        
+          <span class="mdi mdi-cursor-default-click"></span>
+          <div>hover nodes check details</div>
+    </div>
     <div class="body_text">
         All states observed their largest decline in mobility within a week of each other, whereas the start dates of state stay-at-home orders span nearly three weeks. Of the states that imposed a stay-at-home order, all but two observed a time lag between voluntary mobility reductions and the imposition of the stay-at-home order. New York (NY) and California (CA) both observed their largest reduction in mobility during the same week that the stay-at-home order began. The decline in mobility prior to government action may be attributed to a trend of increasing cases, <a target=”_blank” href=https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3599572>a sense of social responsibility,</a> or advanced warning of forthcoming policy changes. 
     </div>
@@ -68,7 +74,7 @@
         <div class="graph_title" id="scatter_title">Mobility and Covid Cases During COVID Waves</div>
         <div class="graph_byline" id="scatter_byline">
             Mobility changes and cases during a <span class="green_highlight">stay-at-home order</span> (April 2020) compared to <span class="pink_highlight">no stay-at-home-order</span> (Aug 2020, Jan 2021, April 2021).  
-        </div>
+        </div> 
     </div>
     
     <!-- buttons -->
@@ -89,11 +95,13 @@
     </div>
 
     <figure class="scatter"></figure>
-
+     <div class="tips">        
+        <span class="mdi mdi-cursor-default-click"></span>
+        <div>hover nodes check details</div>
+      </div>
     <div class="body_text">
         The combination of personal and government responses to the COVID-19 drastically reduced mobility. During the first COVID wave, voluntary isolation outpaced state guidelines—especially in those states resistant to stay-at-home orders. However, 'lockdown fatigue' resulted in less extreme personal mobility reductions through subsequent COVID waves. Stay-at-home measures are effective. Their continued success depends on a considered and prudent approach to their implementation in order to avoid excessive lockdown fatigue and a negative impact on individuals’ voluntary actions.
     </div>
-
     
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
